@@ -1,0 +1,204 @@
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-base: #2b3b4e;
+    -fx-background: #1e2a36;
+    -fx-control-inner-background: #2b3b4e;
+    -fx-text-fill: #e0e0e0;
+}
+
+/* TabPane styling */
+.tab-pane {
+    -fx-background-color: #1e2a36;
+}
+
+.tab-pane .tab-header-area {
+    -fx-padding: 5 0 0 0;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #1a252f;
+}
+
+.tab {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-padding: 8 20;
+    -fx-background-radius: 5 5 0 0;
+}
+
+.tab:selected {
+    -fx-background-color: #3498db;
+}
+
+.tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* TableView styling */
+.table-view {
+    -fx-background-color: #2c3e50;
+    -fx-table-cell-border-color: #1a252f;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-row-cell {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: #e0e0e0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #253544;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3498db;
+}
+
+.table-cell {
+    -fx-text-fill: #e0e0e0;
+    -fx-padding: 8;
+}
+
+/* Button styling */
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-padding: 6 12;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.button:pressed {
+    -fx-background-color: #1c6ea4;
+}
+
+/* TextField and PasswordField */
+.text-field, .password-field {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #95a5a6;
+    -fx-background-radius: 5;
+    -fx-border-color: #2c3e50;
+    -fx-border-radius: 5;
+    -fx-padding: 6;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #34495e;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #2c3e50;
+}
+
+/* ProgressBar */
+.progress-bar .bar {
+    -fx-background-color: #2ecc71;
+    -fx-background-radius: 3;
+}
+
+.progress-bar .track {
+    -fx-background-color: #34495e;
+}
+
+/* ProgressIndicator */
+.progress-indicator {
+    -fx-progress-color: #2ecc71;
+}
+
+/* ScrollPane */
+.scroll-pane {
+    -fx-background-color: #2c3e50;
+    -fx-border-color: #34495e;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: #2c3e50;
+}
+
+/* Label */
+.label {
+    -fx-text-fill: #e0e0e0;
+}
+
+/* Dialog styling (for alert dialogs) */
+.dialog-pane {
+    -fx-background-color: #2c3e50;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: #34495e;
+}
+
+.dialog-pane .content {
+    -fx-text-fill: #e0e0e0;
+}
+
+/* Tooltip */
+.tooltip {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+}
+
+/* Menu Bar */
+.menu-bar {
+    -fx-background-color: #1a252f;
+}
+
+.menu {
+    -fx-text-fill: white;
+}
+
+.menu-item {
+    -fx-text-fill: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: #3498db;
+}
+
+/* Pagination */
+.pagination {
+    -fx-background-color: #2c3e50;
+}
+
+.pagination .page {
+    -fx-background-color: #34495e;
+    -fx-text-fill: white;
+}
+
+.pagination .page:hover {
+    -fx-background-color: #3498db;
+}
