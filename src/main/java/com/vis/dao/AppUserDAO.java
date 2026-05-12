@@ -7,15 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AppUserDAO extends BaseDAO<AppUser> {
+
     @Override
     public void insert(AppUser user) throws SQLException {
-        String sql = "INSERT INTO AppUser (username, password, role, is_active) VALUES (?,?,?,?)";
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
+        String sql = "INSERT INTO AppUser (username, password, role, is_active) VALUES (?, ?, ?, ?)";
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, user.getUsername());
-            ps.setString(2, user.getPassword());
+            ps.setString(2, user.getPassword());  // plain text
             ps.setString(3, user.getRole());
             ps.setBoolean(4, user.isActive());
             ps.executeUpdate();
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) user.setUserId(rs.getInt(1));
         }
     }
 
@@ -55,7 +58,7 @@ public class AppUserDAO extends BaseDAO<AppUser> {
     @Override
     public List<AppUser> getAll() throws SQLException {
         List<AppUser> list = new ArrayList<>();
-        String sql = "SELECT * FROM AppUser";
+        String sql = "SELECT * FROM AppUser ORDER BY user_id";
         try (Statement st = DBConnection.getConnection().createStatement();
              ResultSet rs = st.executeQuery(sql)) {
             while (rs.next()) list.add(extractUser(rs));

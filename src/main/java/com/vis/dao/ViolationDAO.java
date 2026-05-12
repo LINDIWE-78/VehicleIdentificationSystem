@@ -6,17 +6,19 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//inheritance
 public class ViolationDAO extends BaseDAO<Violation> {
 
+    //  CORRECTED: Use CALL statement for PostgreSQL procedure
     @Override
     public void insert(Violation v) throws SQLException {
-        String sql = "{call add_violation(?, ?, ?, ?)}";
-        try (CallableStatement cs = DBConnection.getConnection().prepareCall(sql)) {
-            cs.setInt(1, v.getVehicleId());
-            cs.setDate(2, Date.valueOf(v.getViolationDate()));
-            cs.setString(3, v.getViolationType());
-            cs.setBigDecimal(4, v.getFineAmount());
-            cs.execute();
+        String sql = "CALL add_violation(?, ?, ?, ?)"; //procedure
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
+            ps.setInt(1, v.getVehicleId());
+            ps.setDate(2, Date.valueOf(v.getViolationDate()));
+            ps.setString(3, v.getViolationType());
+            ps.setBigDecimal(4, v.getFineAmount());
+            ps.execute();
         }
     }
 

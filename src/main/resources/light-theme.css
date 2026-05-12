@@ -1,0 +1,83 @@
+/* Light Theme for Vehicle Identification System */
+.root {
+    -fx-font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-base: #f0f0f0;
+    -fx-background: #ffffff;
+    -fx-control-inner-background: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-accent: #4a9eff;
+    -fx-focus-color: #4a9eff;
+}
+
+.menu-bar {
+    -fx-background-color: linear-gradient(to bottom, #e0e0e0, #c0c0c0);
+    -fx-border-color: #a0a0a0;
+}
+.menu { -fx-text-fill: #333333; }
+.menu:hover { -fx-background-color: #d0d0d0; }
+.menu-item:hover { -fx-background-color: #4a9eff; -fx-text-fill: white; }
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #dcdcdc;
+}
+.tab {
+    -fx-background-color: #e8e8e8;
+    -fx-text-fill: #333333;
+}
+.tab:selected {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #4a9eff #4a9eff transparent #4a9eff;
+}
+
+.table-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #c0c0c0;
+}
+.table-view .column-header-background {
+    -fx-background-color: #f0f0f0;
+}
+.table-view .column-header {
+    -fx-background-color: #e0e0e0;
+    -fx-text-fill: #333333;
+}
+.table-row-cell {
+    -fx-background-color: #ffffff;
+}
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+.table-cell {
+    -fx-text-fill: #333333;
+}
+
+.button {
+    -fx-background-color: linear-gradient(to bottom, #4a9eff, #3a7ecc);
+    -fx-text-fill: white;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #5aaaff, #4a8edd);
+}
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #333333;
+    -fx-border-color: #c0c0c0;
+}
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4a9eff;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to right, #2ecc71, #27ae60);
+}
+.progress-bar .track {
+    -fx-background-color: #e0e0e0;
+}
+
+.label {
+    -fx-text-fill: #333333;
+}
+.label.header {
+    -fx-text-fill: #4a9eff;
+}

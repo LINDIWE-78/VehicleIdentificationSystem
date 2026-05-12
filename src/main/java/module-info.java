@@ -7,4 +7,6 @@ module com.vis.vehicleidentificationsystem {
 
     opens com.vis.vehicleidentificationsystem to javafx.fxml;
     exports com.vis.vehicleidentificationsystem;
+    exports com.vis;
+    opens com.vis to javafx.fxml;
 }

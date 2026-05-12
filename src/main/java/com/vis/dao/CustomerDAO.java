@@ -7,15 +7,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerDAO extends BaseDAO<Customer> {
+
     @Override
     public void insert(Customer c) throws SQLException {
         String sql = "INSERT INTO Customer (name, address, phone, email) VALUES (?,?,?,?)";
-        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setString(1, c.getName());
             ps.setString(2, c.getAddress());
             ps.setString(3, c.getPhone());
             ps.setString(4, c.getEmail());
             ps.executeUpdate();
+            ResultSet rs = ps.getGeneratedKeys();
+            if (rs.next()) c.setCustomerId(rs.getInt(1));
         }
     }
 
@@ -61,6 +64,20 @@ public class CustomerDAO extends BaseDAO<Customer> {
             while (rs.next()) list.add(extractCustomer(rs));
         }
         return list;
+    }
+
+    /**
+     * Find a customer by their email address.
+     * Used to link the logged‑in AppUser (username = email) to the Customer record.
+     */
+    public Customer findByEmail(String email) throws SQLException {
+        String sql = "SELECT * FROM Customer WHERE email = ?";
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) return extractCustomer(rs);
+            return null;
+        }
     }
 
     private Customer extractCustomer(ResultSet rs) throws SQLException {

@@ -6,6 +6,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//inheritance
 public class VehicleDAO extends BaseDAO<Vehicle> {
 
     @Override
@@ -68,9 +69,13 @@ public class VehicleDAO extends BaseDAO<Vehicle> {
         return list;
     }
 
+    /**
+     * Retrieves all vehicles with owner names using the view v_vehicle_details.
+     * This fulfills the "view" requirement.
+     */
     public List<Vehicle> getAllWithOwner() throws SQLException {
         List<Vehicle> list = new ArrayList<>();
-        String sql = "SELECT * FROM v_vehicle_details ORDER BY vehicle_id";
+        String sql = "SELECT * FROM v_vehicle_details ORDER BY vehicle_id"; //view
         try (Statement st = DBConnection.getConnection().createStatement();
              ResultSet rs = st.executeQuery(sql)) {
             while (rs.next()) {
@@ -87,6 +92,24 @@ public class VehicleDAO extends BaseDAO<Vehicle> {
         }
         return list;
     }
+
+
+     //Used in the Customer module to show only the logged‑in customer's vehicles.
+    public List<Vehicle> findByOwnerId(int ownerId) throws SQLException {
+        List<Vehicle> list = new ArrayList<>();
+        String sql = "SELECT * FROM Vehicle WHERE owner_id = ?";
+        try (PreparedStatement ps = DBConnection.getConnection().prepareStatement(sql)) {
+            ps.setInt(1, ownerId);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(extractVehicle(rs));
+            }
+        }
+        return list;
+    }
+
+    //Extracts a Vehicle object from the current row of the ResultSet.
+
 
     private Vehicle extractVehicle(ResultSet rs) throws SQLException {
         Vehicle v = new Vehicle();

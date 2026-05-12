@@ -21,18 +21,46 @@ public class Vehicle {
     }
 
     // Getters and Setters
-    public int getVehicleId() { return vehicleId; }
-    public void setVehicleId(int vehicleId) { this.vehicleId = vehicleId; }
-    public String getRegNumber() { return regNumber; }
-    public void setRegNumber(String regNumber) { this.regNumber = regNumber; }
-    public String getMake() { return make; }
-    public void setMake(String make) { this.make = make; }
-    public String getModel() { return model; }
-    public void setModel(String model) { this.model = model; }
-    public int getYear() { return year; }
-    public void setYear(int year) { this.year = year; }
-    public int getOwnerId() { return ownerId; }
-    public void setOwnerId(int ownerId) { this.ownerId = ownerId; }
-    public String getOwnerName() { return ownerName; }
-    public void setOwnerName(String ownerName) { this.ownerName = ownerName; }
+    public int getVehicleId() {
+        return vehicleId;
+    }
+    public void setVehicleId(int vehicleId) {
+        this.vehicleId = vehicleId;
+    }
+    public String getRegNumber() {
+        return regNumber;
+    }
+    public void setRegNumber(String regNumber) {
+        this.regNumber = regNumber;
+    }
+    public String getMake() {
+        return make;
+    }
+    public void setMake(String make) {
+        this.make = make;
+    }
+    public String getModel() {
+        return model;
+    }
+    public void setModel(String model) {
+        this.model = model;
+    }
+    public int getYear() {
+        return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public int getOwnerId() {
+        return ownerId;
+    }
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+    public String getOwnerName() {
+        return ownerName;
+    }
+    public void setOwnerName(String ownerName) {
+        this.ownerName = ownerName;
+    }
 }
