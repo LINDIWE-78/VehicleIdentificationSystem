@@ -203,31 +203,38 @@ MainApp.java
 
 ## Login Screen
 
-![Login](screenshots/login.png)
+<img width="576" height="296" alt="image" src="https://github.com/user-attachments/assets/ca389722-da05-4e4b-90ed-5d33025210f4" />
+
 
 ## Admin Dashboard
 
-![Admin](screenshots/admin.png)
+<img width="512" height="283" alt="image" src="https://github.com/user-attachments/assets/e5571ee0-7b27-4832-8d92-3ae580ef415b" />
+
 
 ## Workshop Module
 
-![Workshop](screenshots/workshop.png)
+<img width="576" height="299" alt="image" src="https://github.com/user-attachments/assets/128c8c7c-3b84-4316-9d05-54537ab352cd" />
+
 
 ## Customer Module
 
-![Customer](screenshots/customer.png)
+<img width="576" height="318" alt="image" src="https://github.com/user-attachments/assets/9f16ea0b-120b-419e-9dcd-ad1d9fd1636d" />
+
 
 ## Insurance Module
 
-![Insurance](screenshots/insurance.png)
+<img width="576" height="293" alt="image" src="https://github.com/user-attachments/assets/d617916b-422d-493b-b5bf-26673f0105ff" />
+
 
 ## Police Module
 
-![Police](screenshots/police.png)
+<img width="576" height="317" alt="image" src="https://github.com/user-attachments/assets/85cf2375-ff9d-4177-86d3-cfc323ceb7a7" />
+
 
 ## Statistics Module
 
-![Statistics](screenshots/statistics.png)
+<img width="576" height="287" alt="image" src="https://github.com/user-attachments/assets/ce40d4ff-a34f-4a9a-a395-e3618a2c5c1a" />
+
 
 ---
 
