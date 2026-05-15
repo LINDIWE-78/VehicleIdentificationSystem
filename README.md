@@ -256,6 +256,12 @@ MainApp.java
 * JDBC exception handling
 
 ---
+## JavaFX UI Features Implemented
+- *Menu Bar*: File > Exit functionality
+- *Pagination*: Page navigation for data tables
+- *ScrollPane*: 20+ dummy items with vertical scrolling
+- *Progress Indicators*: ProgressBar and ProgressIndicator showing task status
+- *Visual Effects*: DropShadow on buttons + FadeTransition animation
 
 # GitHub Repository
 
